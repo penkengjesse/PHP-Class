@@ -27,22 +27,33 @@
         else
             echo "連線成功<br>~";
 
+        //新增一筆資料
+        $sql = "INSERT INTO students VALUES('jack','m','XingZhu','ZhongShan Rd.')";
+
+        if( $dbLink->query( $sql) )
+            echo "成功新增資料";
+        else
+            echo "新增資料錯誤:".$sql."<br>".$dbLink->error."<br>";
+
+        //讀取資料
         $sql = "SELECT * FROM students";//要執行的 sql 語法
         $result = $dbLink->query($sql);//叫 mysql 執行
 
-        var_dump($result);//列出除錯用的資訊
+//        var_dump($result);//列出除錯用的資訊
 
         if( $result->num_rows > 0 )//檢查是否有資料
         {
             while( $row = $result->fetch_array() )//將資料取出 列印
             {
-                echo "name:".$row["name"].
+                echo "<br>name:".$row["name"].
                      ", gender:".$row["gender"].
-                     ", address:".$row["addressArea"].$row["addressDetail"];
+                     ", address:".$row["addressArea"].$row["addressDetail"]."<br>";
             }
         }
         else
             echo "no data";
+
+        $dbLink->close();//應該每次都要關閉資料庫的連線
     ?>
 </body>
 </html>
