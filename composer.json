@@ -1,0 +1,7 @@
+{
+    "name": "jessephp/composerproject",
+    "description": "use composer to build our project",
+    "type": "n",
+    "license": "n",
+    "require": {}
+}
