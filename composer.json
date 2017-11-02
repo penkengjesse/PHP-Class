@@ -1,7 +1,8 @@
 {
-    "name": "jessephp/composerproject",
+    "name": "jessephp/composer-project",
     "description": "use composer to build our project",
-    "type": "n",
-    "license": "n",
+    "type": "project",
+    "license": "free",
+    "minimum-stability": "dev",
     "require": {}
 }
