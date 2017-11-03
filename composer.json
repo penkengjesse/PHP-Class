@@ -4,5 +4,7 @@
     "type": "project",
     "license": "free",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "nesbot/carbon": "^1.23@dev"
+    }
 }
