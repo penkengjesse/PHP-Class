@@ -5,6 +5,8 @@
     "license": "free",
     "minimum-stability": "dev",
     "require": {
-        "nesbot/carbon": "^1.23@dev"
+        "nesbot/carbon": "^1.23@dev",
+        "illuminate/database": "^5.6@dev",
+        "doctrine/dbal": "^2.7@dev"
     }
 }
